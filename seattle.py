@@ -8,6 +8,9 @@ from collections import deque
 import heapq
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
+import geopandas as gpd
+from shapely.geometry import Point
+from collections import deque
 
 """
 1) Reads the "Transit_Stops_for_King_County_Metro___transitstop_point.geojson" file,
@@ -101,7 +104,6 @@ def create_edges_by_route(G: nx.Graph):
                 G.add_edge(n1, n2, weight=dist, route=r)
 
 def bfs_expansion(G: nx.Graph, start, goal):
-    from collections import deque
     queue = deque([start])
     visited_nodes = set([start])
     parent = {}
@@ -151,7 +153,6 @@ def astar_expansion(G: nx.Graph, start, goal):
     visited_nodes = set([start])
     gCost = {start: 0.0}
     openSet = []
-    import heapq
     heapq.heappush(openSet, (0.0, start))
     inOpen = {start}
 
@@ -220,9 +221,6 @@ def visualize_search(G: nx.Graph,
     - unvisited => blue/gray
     If no path => no red edges. Still show start/goal in bigger size.
     """
-    import geopandas as gpd
-    from shapely.geometry import Point
-
     visited_nodes = visited_nodes or set()
 
     node_coords = []
