@@ -1,4 +1,10 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17798593)
+# ❗ Bus Route Processing Behavior
+
+- **`main` branch**: Treats `975` and `975N` as **different** bus routes.
+- **[`Remove-Route-list-letter`](https://github.com/CS5100-Spring25-Seattle/graphsearch-lqc412/tree/Remove-Route-list-letter)** branch: Treats `975` and `975N` as **the same** bus route by removing the letter.
+
+
 # Homework - PNW Search 🔍🗺️📌🕵️
 
 Topics: BFS, DFS, and A*
